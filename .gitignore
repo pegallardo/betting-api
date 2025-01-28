@@ -22,8 +22,9 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-football-betting-api/target/maven-archiver/pom.properties
-gateway-api/target/maven-archiver/pom.properties
-prediction-api/target/maven-archiver/pom.properties
-shared-libraries/target/maven-archiver/pom.properties
-stock-betting-api/target/maven-archiver/pom.properties
+football-betting-api/target/*
+gateway-api/target/*
+prediction-api/target/*
+shared-libraries/target/*
+stock-betting-api/target/*
+.vscode/settings.json

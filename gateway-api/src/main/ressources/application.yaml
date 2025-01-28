@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: football-betting
+        uri: lb://FOOTBALL-BETTING-API:8083
+        predicates:
+        - Path=/football-betting/**
+      - id: stock-betting
+        uri: lb://STOCK-BETTING-API:8082
+        predicates:
+        - Path=/stock-betting/**
+      - id: prediction
+        uri: lb://PREDICTION-API:8081
+        predicates:
+        - Path=/prediction/**
