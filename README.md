@@ -10,7 +10,7 @@ betting-api/
 ├── prediction-api/ (based on Spark ML Engine)
 ├── stock-betting-api/
 ├── football-betting-api/
-├── shared-libraries/ (optional for shared components or utilities)
+├── shared-libraries/ (shared components or utilities)
 ├── README.md
 ├── docker-compose.yml
 └── k8s/
