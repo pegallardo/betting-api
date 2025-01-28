@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shared-libraries-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shared-libraries
+  template:
+    metadata:
+      labels:
+        app: shared-libraries
+    spec:
+      containers:
+        - name: shared-libraries
+          image: com.pegallardo/shared-libraries:v1.0 # Replace with actual tag
+          ports:
+            - containerPort: 8084 # Or any other necessary port
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shared-libraries-service
+spec:
+  selector:
+    app: shared-libraries
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8084
+  type: ClusterIP
