@@ -28,3 +28,4 @@ prediction-api/target/*
 shared-libraries/target/*
 stock-betting-api/target/*
 .vscode/settings.json
+.vscode/launch.json

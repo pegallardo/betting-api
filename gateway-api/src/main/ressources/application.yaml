@@ -14,3 +14,23 @@ spring:
         uri: lb://PREDICTION-API:8081
         predicates:
         - Path=/prediction/**
+      - id: fallback
+        uri: http://fallback-service
+        predicates:
+        - Path=/fallback/**
+  security:
+    jwt:
+      secret: 4e6a8a2a-4a6f-4f6a-8a2a-4a6f4f6a8a2a
+      expiration: 86400 # 1 day in seconds
+      token-header: Authorization
+      token-prefix: Bearer
+      issuer: your-issuer
+      audience: your-audience
+      validation:
+        enabled: true
+        ignore-expiration: false
+        ignore-signature: false  
+  data:
+    redis:
+      host: localhost
+      port: 6379
