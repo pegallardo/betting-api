@@ -1,7 +1,7 @@
 # betting-api
 Spring Boot based Multi-purposes Betting API
 
-Java 23 + Spring Boot 3.4.2
+Java 21 + Spring Boot 3.4.2
 
 Target structure:
 
